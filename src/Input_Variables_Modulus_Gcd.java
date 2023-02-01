@@ -20,7 +20,7 @@ public class Input_Variables_Modulus_Gcd extends Input_Variables_Binary_Base {
         try {
             this.x++;
             if (this.x == 1) {
-                System.out.println("Press 'enter' if there is no question below.");
+                System.out.println("Press 'enter' if there is no prompt below.");
             }
             in.nextLine();
             System.out.println("Enter the encrypted message you wish to decrypt: ");
@@ -46,7 +46,7 @@ public class Input_Variables_Modulus_Gcd extends Input_Variables_Binary_Base {
         
             this.x++;
             if (this.x == 1) {
-                System.out.println("Press 'enter' if there is no question below.");
+                System.out.println("Press 'enter' if there is no prompt below.");
             }
             try{
             in.nextLine();

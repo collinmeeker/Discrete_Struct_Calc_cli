@@ -14,8 +14,7 @@ public class App extends Input_Variabes_Counting {
     boolean MainMenu;
     static Scanner in;
     Modulus_Gcd x = new Modulus_Gcd();
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_RESET = "\u001B[0m";
+    
 
     public static void main(String[] args) {
         in = new Scanner(System.in);
@@ -234,7 +233,7 @@ public class App extends Input_Variabes_Counting {
                 break;
 
             } catch (Exception e) {
-                System.out.println(ANSI_RED + nav.getTryCatchError() + ANSI_RESET);
+                System.out.println(nav.getTryCatchError());
                 in.nextLine();
             }
         }
@@ -287,7 +286,7 @@ public class App extends Input_Variabes_Counting {
                         break;
                 }
             } catch (Exception e) {
-                System.out.println(ANSI_RED + nav.getTryCatchError() + ANSI_RESET);
+                System.out.println(nav.getTryCatchError());
                 in.nextLine();
             }
 
@@ -378,7 +377,7 @@ public class App extends Input_Variabes_Counting {
                         break;
                 }
             } catch (Exception e) {
-                System.out.println(ANSI_RED + nav.getTryCatchError() + ANSI_RESET);
+                System.out.println(nav.getTryCatchError());
                 in.nextLine();
             }
 
