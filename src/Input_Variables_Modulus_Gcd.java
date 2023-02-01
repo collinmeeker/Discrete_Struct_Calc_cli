@@ -5,12 +5,11 @@ import java.util.Scanner;
  * class methods
  */
 public class Input_Variables_Modulus_Gcd extends Input_Variables_Binary_Base {
-    int x; // jank way to resolve in.nextLine() issue
     Scanner in = new Scanner(System.in);
     Modulus_Gcd calc = new Modulus_Gcd();
     Navigation nav = new Navigation();
     Formula_Strings formula = new Formula_Strings();
-    protected int y;
+    
 
     /**
      * This method puts user input into the Caesar_Decipher method in the
@@ -18,13 +17,9 @@ public class Input_Variables_Modulus_Gcd extends Input_Variables_Binary_Base {
      */
     public void Caesar_Decipher_Answer() {
         try {
-            this.x++;
-            if (this.x == 1) {
-                System.out.println("Press 'enter' if there is no prompt below.");
-            }
-            in.nextLine();
+
             System.out.println("Enter the encrypted message you wish to decrypt: ");
-            String message = in.nextLine();
+            String message = in.next();
             System.out.println("Enter the amount the encrypted message was adjusted by (Caesar Cipher is 3): ");
             int adjustment = in.nextInt();
             System.out.println(
@@ -32,7 +27,6 @@ public class Input_Variables_Modulus_Gcd extends Input_Variables_Binary_Base {
                             + "\n\nAnswer: " + calc.Caesar_Decipher(message, adjustment));
             System.out.println("\n" + nav.TravelPrompt());
         } catch (Exception e) {
-            this.x = 0;
             System.out.println(nav.getTryCatchError() + nav.TravelPrompt());
             in.nextLine();
         }
@@ -43,15 +37,10 @@ public class Input_Variables_Modulus_Gcd extends Input_Variables_Binary_Base {
      * class
      */
     public void Caesar_Cipher_Answer() {
-        
-            this.x++;
-            if (this.x == 1) {
-                System.out.println("Press 'enter' if there is no prompt below.");
-            }
-            try{
-            in.nextLine();
+
+        try {
             System.out.println("Enter the message you wish you encrypt: ");
-            String message = in.nextLine();
+            String message = in.next();
             System.out.println("Enter the amount you wish to encrypt the message by (Caesar Cipher is 3): ");
             int adjustment = in.nextInt();
             System.out.println(
@@ -59,7 +48,6 @@ public class Input_Variables_Modulus_Gcd extends Input_Variables_Binary_Base {
                             + "\n\nAnswer: " + calc.Caesar_Cipher(message, adjustment));
             System.out.println("\n" + nav.TravelPrompt());
         } catch (Exception e) {
-            this.x = 0;
             System.out.println(nav.getTryCatchError() + nav.TravelPrompt());
             in.nextLine();
         }
@@ -107,7 +95,6 @@ public class Input_Variables_Modulus_Gcd extends Input_Variables_Binary_Base {
         }
     }
 
-  
     /**
      * This method puts user input into the Gcd_Reverse method in the Modulus_Gcd
      * class
